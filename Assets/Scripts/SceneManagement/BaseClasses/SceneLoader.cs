@@ -65,7 +65,7 @@ namespace OPSystems.SceneManagement
                 _activeScene = sceneToLoad;
             }
                         
-            _scenesToLoadAsyncOperations.Add(SceneManager.LoadSceneAsync(sceneToLoad.ScenePath));
+            _scenesToLoadAsyncOperations.Add(SceneManager.LoadSceneAsync(sceneToLoad.ScenePath, LoadSceneMode.Additive));
 
             if (!_isLoading)
             {
