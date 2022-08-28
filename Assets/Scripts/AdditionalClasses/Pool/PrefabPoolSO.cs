@@ -34,6 +34,12 @@ namespace OPSystems.Pool
             newMember.transform.SetParent(_poolRoot);
             return newMember;
         }
+        
+        public override void Return(GameObject member)
+        {
+            member.SetActive(false);
+            base.Return(member);
+        }
 
     }
 
