@@ -26,7 +26,10 @@ namespace OPSystems.FileManagement
 
         public static bool SaveFile(string fileName, string fileData, string folderName = "")
         {
-            string fullFilePath = CombinePath(fileName, folderName);
+            string folderPath = Path.Combine(Application.persistentDataPath, folderName);
+            string fullFilePath = Path.Combine(folderPath, fileName + ".dat");
+
+            Directory.CreateDirectory(folderPath);
 
             try
             {
