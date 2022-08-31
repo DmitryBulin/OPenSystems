@@ -13,13 +13,15 @@ namespace OPSystems.SaveSystem
     public class SaveManager : MonoBehaviour
     {
         [SerializeField] private string _gameplaySaveFolder = "";
-        public SaveDataSO CurrentGameplaySave { get; set; }
+        [SerializeField] private SaveDataSO _currentScene;
         [Header("Listening to")]
         [SerializeField] private EventChannelBase _gameplaySaveChannel = default;
         [SerializeField] private EventChannelBase _gameplayLoadChannel = default;
         [Header("Broadcasting on")]
         [SerializeField] private EventChannelBase<bool> _savingResultChannel = default;
         [SerializeField] private EventChannelBase<bool> _loadingResultChannel = default;
+
+        public SaveDataSO CurrentGameplaySave { get => _currentScene; set => _currentScene = value; }
 
         private void OnEnable()
         {
