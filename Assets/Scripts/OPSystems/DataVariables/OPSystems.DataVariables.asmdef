@@ -1,0 +1,16 @@
+{
+    "name": "DataVariables",
+    "rootNamespace": "",
+    "references": [
+        "GUID:866c0da2b841f3442b7744b81960de78"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
